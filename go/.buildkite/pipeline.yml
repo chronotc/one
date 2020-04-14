@@ -1,0 +1,4 @@
+steps:
+  - command: "echo go"
+  - command: "echo gogo"
+  - command: "echo gogogo"

@@ -1,0 +1,15 @@
+steps:
+  - label: "Triggering pipelines"
+    plugins:
+      - chronotc/monorepo-diff#add-command-support:
+          diff: "git diff --name-only HEAD~1"
+          watch:
+            - path: "nextjs/"
+              config:
+                trigger: "nextjs-deploy" # separate pipeline
+            - path: "placeholder/"
+              config:
+                command: "echo 1234"
+            - path: "go/"
+              config:
+                command: "buildkite-agent pipeline upload ./go/.buildkite/pipeline.yml"

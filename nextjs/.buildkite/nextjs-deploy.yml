@@ -1,0 +1,4 @@
+steps:
+  - command: "echo deploy"
+  - command: "echo deploy"
+  - command: "echo deploy"
